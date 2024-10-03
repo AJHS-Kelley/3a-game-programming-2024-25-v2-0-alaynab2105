@@ -1,0 +1,8 @@
+
+# CODE STARTS HERE
+
+color = "Blue" 
+cost = 9.75
+print(color == "Red" or cost >= 9.0)
+
+# CODE ENDS HERE
