@@ -51,14 +51,14 @@ def playerChoice()-> str:
     """Allows the player to choose rock ,paper , scissors."""
     playerChoice = input ("Please enter rock , paper or scissors and press enter.\n").lower()
     if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
-     playerChoice = input("Please enter rock, paper or scissors and press enter.\n").lower()
-    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
-        print( " You are not follwing directions. Please try again.\n")
-        exit()
+        playerChoice = input("Please enter rock, paper or scissors and press enter.\n").lower()
+        if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
+            print( " You are not follwing directions. Please try again.\n")
+            exit()
         print(f"You have chosen {playerChoice}.\n")
     else:
         print(f"You have chosen {playerChoice}.\n")
-        return playerChoice
+    return playerChoice
 
 
 def cpuChoice()->str:
@@ -74,15 +74,9 @@ def cpuChoice()->str:
         print("unable to determine CPU choice.\nPlease restart.\n")
         exit()
     return cpuChoice
-# MAIN GAME LOOP
-while playerScore < 5 or cpuScore < 5:
-    print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} points.\n")
-    
 
-    # let cpu select choice at random.
-    print(f"CPU Choice: {cpuChoice}")
-
-    # compare player choice to cpu choice 
+def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuChoice are both ARGUEMENTS, they will be string vaules.
+    """This function uses the player choice and CPU choice to determine a winner."""
     if playerChoice == "rock" and cpuChoice =="paper":
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n")
@@ -128,6 +122,19 @@ while playerScore < 5 or cpuScore < 5:
     else:
         print("Unable to determine a winner. Please restart.\n")
         exit()
+
+# MAIN GAME LOOP
+while playerScore < 5 or cpuScore < 5:
+    print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} points.\n")
+    
+
+    # let cpu select choice at random.
+    
+    # print(f"CPU Choice: {cpuChoice}")
+    
+    # compare player choice to cpu choice 
+    
+
 
 
 print(f"Your Final Score: {playerScore}CPU Final Score: {cpuScore}\n")
