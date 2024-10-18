@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors by Alayna Brewer, v3.0
+# Rock, Paper, Scissors by Alayna Brewer, v3.1
 
 # MODULE IMPORTS
 import random
@@ -88,10 +88,12 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("You win a point.\n")
         playerScore += 1
+        return "Player Wins"
     elif playerChoice == "rock" and cpuChoice == "rock":
         # DRAW
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("It's a draw!\n")
+        return "Draw"
     elif playerChoice =="scissors" and cpuChoice == "rock":
         # CPU WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
@@ -103,19 +105,23 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n") 
         print("You win a point.\n")
         playerScore += 1 
+        return "Player Wins"
     elif playerChoice == "scissors" and cpuChoice == "scissors":
         # DRAW
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("It's a draw!\n")
+        return "Draw"
     elif playerChoice == "paper" and cpuChoice == "rock":
         # PLAYER WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("You win a point.\n")
         playerScore += 1 
+        return "Player Wins"
     elif playerChoice == "paper" and cpuChoice == "paper": 
         # DRAW
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("It's a draw!\n") 
+        return "Draw"
     elif playerChoice == "paper" and cpuChoice == "scissors":
         # CPU WINS
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
@@ -125,6 +131,8 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
     else:
         print("Unable to determine a winner. Please restart.\n")
         exit()
+    # return statements IMMEDIATELY exit a function.
+
 
 # MAIN GAME LOOP
 while playerScore < 5 or cpuScore < 5:
