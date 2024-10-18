@@ -78,10 +78,11 @@ def cpuChoice()->str:
 def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuChoice are both ARGUEMENTS, they will be string vaules.
     """This function uses the player choice and CPU choice to determine a winner."""
     if playerChoice == "rock" and cpuChoice =="paper":
+        # CPU WINS
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n")
-        cpuScore+=1
-    # CPU WINS
+        cpuScore += 1
+        return "CPU Wins"
     elif playerChoice =="rock" and cpuChoice == "scissors":
     # PLAYER WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
@@ -96,6 +97,7 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n") 
         cpuScore+=1
+        return "CPU Wins"
     elif playerChoice == "scissors" and cpuChoice == "paper": 
         # PLAYER WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n") 
@@ -119,6 +121,7 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n")
         cpuScore+=1 
+        return "CPU Wins"
     else:
         print("Unable to determine a winner. Please restart.\n")
         exit()
