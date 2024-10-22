@@ -130,7 +130,7 @@ def score(winner: str) -> int:
         score = 1
     else: # This is a DRAW.
         score = 0
-        return score
+    return score
 
 
 
