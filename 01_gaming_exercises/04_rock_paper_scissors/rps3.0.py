@@ -25,9 +25,6 @@ def playerName() -> str: # Function Signature -- name of a function, ( arguments
         playerName=input("Please type your name then press enter.\n")
     return playerName
 
-# CALLING THE FUNCTION
-playerName = playerName() 
-    
     # THE RULES using MULTIPLE-LINE STRINGS
 def rules()-> None:
     """This function prints the rules for rock, paper, scissors."""
@@ -60,7 +57,6 @@ def playerChoice()-> str:
         print(f"You have chosen {playerChoice}.\n")
     return playerChoice
 
-
 def cpuChoice()->str:
     """Allows the CPU to choose rock, paper, scissors."""
     cpuChoice = random.randint(0,2) # randomly select 0,1, or 2.
@@ -74,20 +70,18 @@ def cpuChoice()->str:
         print("unable to determine CPU choice.\nPlease restart.\n")
         exit()
     return cpuChoice
-
+ # Remove the lines of code that add score to player,CPU,or draws below.
 def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuChoice are both ARGUEMENTS, they will be string vaules.
-    """This function uses the player choice and CPU choice to determine a winner."""
+    """Determines the winner using player and CPU choices."""
     if playerChoice == "rock" and cpuChoice =="paper":
         # CPU WINS
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n")
-        cpuScore += 1
         return "CPU Wins"
     elif playerChoice =="rock" and cpuChoice == "scissors":
     # PLAYER WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("You win a point.\n")
-        playerScore += 1
         return "Player Wins"
     elif playerChoice == "rock" and cpuChoice == "rock":
         # DRAW
@@ -98,13 +92,11 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
         # CPU WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n") 
-        cpuScore+=1
         return "CPU Wins"
     elif playerChoice == "scissors" and cpuChoice == "paper": 
         # PLAYER WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n") 
         print("You win a point.\n")
-        playerScore += 1 
         return "Player Wins"
     elif playerChoice == "scissors" and cpuChoice == "scissors":
         # DRAW
@@ -115,7 +107,6 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
         # PLAYER WINS 
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("You win a point.\n")
-        playerScore += 1 
         return "Player Wins"
     elif playerChoice == "paper" and cpuChoice == "paper": 
         # DRAW
@@ -126,42 +117,32 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:# playerChocie and cpuC
         # CPU WINS
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The CPU wins a point.\n")
-        cpuScore+=1 
         return "CPU Wins"
     else:
         print("Unable to determine a winner. Please restart.\n")
         exit()
-    # return statements IMMEDIATELY exit a function.
-
-
-# MAIN GAME LOOP
-while playerScore < 5 or cpuScore < 5:
-    print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} points.\n")
     
-
-    # let cpu select choice at random.
-    
-    # print(f"CPU Choice: {cpuChoice}")
-    
-    # compare player choice to cpu choice 
-    
-
-
-
-print(f"Your Final Score: {playerScore}CPU Final Score: {cpuScore}\n")
-if  playerScore > cpuScore:
-    print(f"Congratulations {playerName}, a winner is you!\n")
-elif cpuScore > playerScore:
-    print(f"The CPU wins. You are a disappointment to all.\n")
-else:
-    print("Unable to determine a winner.\nPlease restart.\n")
-    exit()
+def score(winner: str) -> int:
+    """This function uses the winner to update the score for CPU, Num, DRAWS, and player score."""
+    if winner == "Player Wins":
+        score = 1
+    elif winner == "CPU Wins":
+        score = 1
+    else: # This is a DRAW.
+        score = 0
+        return score
 
 
 
 
 
 
+
+
+
+def matchWinner(playerScore: int, cpuScore: int) -> bool:
+    """This function determines if a player has won the game or not by scoring 5 points."""
+    if playerScore >= 5:
 
 
 
