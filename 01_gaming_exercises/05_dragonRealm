@@ -5,22 +5,23 @@ import random
 import time
 
 def displayIntro():
-
-    print('You are in a land full of dragons. In front of you,')
-    print('you see two caves. In one cave, the dragon is friendly')
+    print( " Wakey wakey brave solider it's time to get up and find the safest way to get to orlando")
+    print('You are in a land full of dragons and trolls. In front of you,')
+    print('you see three ways to get to orlando. In one way you see a bus, the dragon is friendly')
     print('and will share his treasure with you. The other dragon')
     print('is greedy and hungry, and will eat you on sight.')
+    print('and in the third one there is a troll that is friendly')
     print()
 
-def chooseCave():
-    cave = ''
-    while cave != '1' and cave != '2':
-        print('Which cave will you go into? (1 or 2)')
-        cave = input()
-    return cave
+def chooseTransportation():
+    transportation = ''
+    while transportation != '1' and transportation != '2'and transportation != '3':
+        print('Which transportation will you take? (1,2 or 3) 1 for the bus 2 for the train and 3 for the plane')
+        transportation = input()
+    return transportation
 
-def checkCave(chosenCave):
-    print('You approach the cave...')
+def checkTransportation(chosenTransportation):
+    print('You approach the Bus ...')
     time.sleep(2)
     print('It is dark and spooky...')
     time.sleep(2)
@@ -28,13 +29,88 @@ def checkCave(chosenCave):
     print()
     time.sleep(2)
 
-    friendlyCave = random.randint(1, 2)
+    friendlyTransportation = random.randint(1, 2, 3)
 
-    if chosenCave == str(friendlyCave):
+    if chosenTransportation == str(friendlyTransportation):
         print('Gives you his treasure!')
 
     else:
         print('Gobbles you down in one bite!')
+
+# Game loop 
+        
+print(" This is a ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -42,7 +118,7 @@ playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    caveNumber = chooseCave()
-    checkCave(caveNumber)
+    transportationNumber = chooseTransportation()
+    (transportationNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
