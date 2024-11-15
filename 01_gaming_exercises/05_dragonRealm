@@ -4,6 +4,15 @@
 import random
 import time
 
+
+# ITEM DATA 
+itemSelected = 0
+numItems= 0 
+hasCharger = False
+hasSnacks = False
+hasHeadphones = False
+waitTime=0
+# GAME FUNCTIONS
 def displayIntro():
     print( " Wakey wakey brave solider it's time to get up and find the safest way to get to orlando")
     print('You are in a land full of dragons and trolls. In front of you,')
@@ -12,6 +21,7 @@ def displayIntro():
     print('is greedy and hungry, and will eat you on sight.')
     print('and in the third one there is a troll that is friendly')
     print()
+time.sleep(waitTime) 
 
 def chooseTransportation():
     transportation = ''
@@ -39,7 +49,41 @@ def checkTransportation(chosenTransportation):
 
 # Game loop 
         
-print(" This is a ")
+print("This is a text based adventure game. Occassionally, the game will pause to give you time to read the instructions and descriptions.\n" )
+waitTime = int(input("How many seconds would you like the game to pause each time?\nA minimum of two seconds and a maximum of five seconds is suggested.\nEnter an integer value and press enter."))
+
+playAgain = 'yes'
+
+while playAgain == 'yes'or playAgain == 'y':
+
+    displayIntro()
+
+    
+    # ITEM SELECTION
+    print("As you begin to set out for adventure, you need to gather some equipment. You can only bring two items with you.  Choose carefully.\n")
+    print("Your options are:a charger, snacks or headphones.\n")
+    time.sleep(waitTime)
+    numItems = 0 
+    while numItems < 2:
+        itemSelected = int(input("Which item do you want? Enter 1 for the charger , 2 for the snacks, or 3 for the headphones.\n"))
+        if itemSelected == 1:
+            hasCharger = True
+        elif itemSelected == 2:
+            hasSnacks = True
+        elif itemSelected == 3:
+            hasHeadphones = True
+        else:
+            print("Unable to determine an item. Please enter 1 for the charger, 2 for the snacks, and 3 for the headphones.\n")
+        numItems += 1
+        print("You have chosen your equipment and set out for adventure. You are equipped with:\n")
+    if hasCharger:
+        print("an charger.\n")
+    if hasSnacks:
+        print("snacks.\n")
+    if hasHeadphones:
+        print("Headphones.\n")
+    time.sleep(waitTime)
+
 
 
 
