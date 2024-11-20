@@ -28,7 +28,11 @@ hasCharger = False
 hasSnacks = False
 hasHeadphones = False
 waitTime = 0
+# TRANSPORTATION FATE
 busFate = random.randint(0,1)
+trainFate = random.randint(0,1)
+planeFate = random.randint(0,1)
+
 # GAME FUNCTIONS
 def displayIntro():
     print( " Wakey wakey brave solider it's time to get up and find the safest way to get to orlando")
@@ -104,88 +108,24 @@ while playAgain == 'yes'or playAgain == 'y':
     if transportation == '1':
         print( " You chose the bus!")
         if busFate == 0:
-            print("The bus ride was long but you made it.")
+            print("The bus ride was long but you made it and a troll shared his treasure with you!!")
         elif busFate == 1:
-            print("The bus left but suddenly the bus driver passed out and the bus flippedover after a crash.")
-    if transportation == '2':
+            print("The bus left but suddenly the bus driver passed out and the bus flipped over after a crash and a troll steals everything you have and eats you.")
+    elif transportation == '2':
         print(" You chose the train!")
-    if transportation == '3':
+        if trainFate == 0:
+            print("You made it , you did have to stop a couple times because of problems with the train but you made it and a friendly dragon gave you some gold!")
+        elif trainFate == 1:
+            print("All of a sudden the dragon finds you and opens his jaws and eats you in one bite.")
+    elif transportation == '3':
         print(" You chose the plane!")
+        if planeFate == 0:
+            print("You  made it safely and a nice dragon and troll gave you a bunch of treasure!!")
+        elif planeFate == 1:
+            print("You were almost to orlando but while you were on the plane a dragon blew his fire breathe and blew the whole plane up..")
     
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 playAgain = 'yes'
 
@@ -195,17 +135,6 @@ while playAgain == 'yes' or playAgain == 'y':
     (transportationNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
-
-
-
-
-
-
-
-
-
-
-
 
 
 
