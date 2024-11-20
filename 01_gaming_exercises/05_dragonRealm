@@ -97,8 +97,15 @@ while playAgain == 'yes'or playAgain == 'y':
     if hasHeadphones:
         print("Headphones.\n")
     time.sleep(waitTime)
+    transportation = chooseTransportation()
+    if transportation == 1:
+        print( " You chose the bus!")
+    if transportation == 2:
+        print(" You chose the train!")
+    if transportation == 3:
+        print(" You chose the plane!")
 
-
+  
 
 
 
@@ -196,4 +203,5 @@ while playAgain == 'yes' or playAgain == 'y':
 
 
 # CLOSE THE FILE
+saveData.write("END OF GAME LOG\n\n")
 saveData.close()
