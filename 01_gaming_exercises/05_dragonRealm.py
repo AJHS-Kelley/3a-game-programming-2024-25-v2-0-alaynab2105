@@ -1,5 +1,6 @@
 # Dragon Realm, <STUDENT_NAME>, v0.0
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
+# Good progress so far, please make sure to finish by FRIDAY, NOVEMBER 22. 
 
 import random
 import time
@@ -8,6 +9,7 @@ import datetime
 # SAVING DATA TO A FILE
 # STEP 1 -- Create the file name to us.
 logFileName = "dragonRealmLog" + str(time.time()) + ".txt"
+# Just use dragonRealmLog.txt as the file name on line 10. 
 # Example: dragonRealmLog1132AM.txt
 
 # STEP 2 -- Create / Open the file to save the data.
