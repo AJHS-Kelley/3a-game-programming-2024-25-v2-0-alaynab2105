@@ -101,7 +101,7 @@ while playAgain == 'yes'or playAgain == 'y':
         print("Headphones.\n")
     time.sleep(waitTime)
     transportation = chooseTransportation()
-    if transportation == 1:
+    if transportation == '1':
         print( " You chose the bus!")
         if busFate == 0:
             print("The bus ride was long but you made it.")
