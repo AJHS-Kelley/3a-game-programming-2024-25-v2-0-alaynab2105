@@ -103,13 +103,13 @@ while playAgain == 'yes'or playAgain == 'y':
     transportation = chooseTransportation()
     if transportation == '1':
         print( " You chose the bus!")
-        if busFate == 0:
+        if busFate == '0':
             print("The bus ride was long but you made it.")
-        elif busFate == 1:
+        elif busFate == '1':
             print("The bus left but suddenly the bus driver passed out and the bus flippedover after a crash.")
-    if transportation == 2:
+    if transportation == '2':
         print(" You chose the train!")
-    if transportation == 3:
+    if transportation == '3':
         print(" You chose the plane!")
     
 
