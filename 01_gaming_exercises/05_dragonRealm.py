@@ -27,8 +27,8 @@ numItems= 0
 hasCharger = False
 hasSnacks = False
 hasHeadphones = False
-waitTime=0
-busFate = random.randint (0,1)
+waitTime = 0
+busFate = random.randint(0,1)
 # GAME FUNCTIONS
 def displayIntro():
     print( " Wakey wakey brave solider it's time to get up and find the safest way to get to orlando")
@@ -103,9 +103,9 @@ while playAgain == 'yes'or playAgain == 'y':
     transportation = chooseTransportation()
     if transportation == '1':
         print( " You chose the bus!")
-        if busFate == '0':
+        if busFate == 0:
             print("The bus ride was long but you made it.")
-        elif busFate == '1':
+        elif busFate == 1:
             print("The bus left but suddenly the bus driver passed out and the bus flippedover after a crash.")
     if transportation == '2':
         print(" You chose the train!")
