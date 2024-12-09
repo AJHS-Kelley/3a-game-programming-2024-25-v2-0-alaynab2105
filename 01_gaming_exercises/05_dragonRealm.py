@@ -8,7 +8,7 @@ import datetime
 
 # SAVING DATA TO A FILE
 # STEP 1 -- Create the file name to us.
-logFileName = "dragonRealmLog" + str(time.time()) + ".txt"
+logFileName = "dragonRealmLog.txt" # I changed the file name. 
 # Just use dragonRealmLog.txt as the file name on line 10. 
 # Example: dragonRealmLog1132AM.txt
 
